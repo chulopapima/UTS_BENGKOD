@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Admin\ObatController;
+use App\Http\Controllers\Admin\AdminPoliController;
+use App\Http\Controllers\Admin\DokterController;
+use App\Http\Controllers\Admin\PasienController;
 
 // Redirect halaman utama ke login
 Route::redirect('/', '/login');
