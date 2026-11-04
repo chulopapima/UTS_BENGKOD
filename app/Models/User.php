@@ -44,4 +44,5 @@ class User extends Authenticatable
     {
         return $this->hasMany(DaftarPoli::class, 'id_pasien');
     }
+    
 }

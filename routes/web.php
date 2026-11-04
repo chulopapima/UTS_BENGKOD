@@ -43,10 +43,10 @@ Route::middleware(['auth'])->group(function () {
     });
 
     // 2. Dokter
-    Route::middleware(['role:dokter'])->prefix('dokter')->group(function () {
-        Route::get('/dashboard', [DashboardController::class, 'dokter'])->name('dokter.dashboard');
+    Route::middleware(['role:dokter'])->prefix('dokter')->name('dokter.')->group(function () {
+        Route::get('/dashboard', [DashboardController::class, 'dokter'])->name('dashboard');
         
-        // Resource route (otomatis membuat route jadwal-periksa.index, dll)
+        // Resource route otomatis menghasilkan: dokter.jadwal-periksa.index, dokter.jadwal-periksa.edit, dll.
         Route::resource('jadwal-periksa', JadwalPeriksaController::class);
 
         // Periksa Pasien
